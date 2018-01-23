@@ -19,6 +19,9 @@ VL6180X::VL6180X(void)
   , io_timeout(0) // no timeout
   , did_timeout(false)
 {
+  // Apparently this isn't needed. But I couldn't get it to work
+  // Sqeeeee conference hackiness!
+  Wire.begin(16,17);
 }
 
 // Public Methods //////////////////////////////////////////////////////////////
